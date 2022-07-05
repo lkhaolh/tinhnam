@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<script type="text/javascript">
+	function caculate(){
+	let a = parseInt(document.getElementById('nam').value);
+	let b = "";
+	let c = "";
+
+	switch((a-3)%10){
+		case 0: b = "Quý";
+			break;
+		case 1: b = "Giáp";
+			break;
+		case 2: b = "Ất";
+			break;
+		case 3: b = "Bính";
+			break;
+		case 4: b = "Đinh";
+			break;
+		case 5: b = "Mậu";
+			break;
+		case 6: b = "Kỷ";
+			break;
+		case 7: b = "Canh";
+			break;
+		case 8: b = "Tân";
+			break;
+		case 9: b = "Nhâm";
+			break;
+		default: alert('Nhập lại');
+	};
+	switch((a-3)%12){
+		case 0: c = "Hợi";
+			break;
+		case 1: c = "Tý";
+			break;
+		case 2: c = "Sửu";
+			break;
+		case 3: c = "Dần";
+			break;
+		case 4: c = "Mẹo";
+			break;
+		case 5: c = "Thìn";
+			break;
+		case 6: c = "Tỵ";
+			break;
+		case 7: c = "Ngọ";
+			break;
+		case 8: c = "Mùi";
+			break;
+		case 9: c = "Thân";
+			break;
+		case 10: c = "Dậu";
+			break;
+		case 11: c = "Tuất";
+			break;
+		default:
+		alert('Nhập lại');
+	};
+
+	let resuilt = (`${b} ${c}`);
+	document.getElementById('kq').value = resuilt
+}	
+</script>
+<body>
+<div style="width: 400px;height: 100px;background: white; background-image: url(https://gamek.mediacdn.vn/thumb_w/640/133514250583805952/2022/6/4/photo-1-1654333508977448940123.jpg);">
+	<div style="color: white; text-align: center;background: black;margin: 0px;"><h2>Tính năm âm lịch</h2></div>
+	<div style="width: 180px;height: 50px;float: left;text-indent: 20px;font-size: 20px;color: white;">
+		Năm dương lịch
+		<input type="number" id="nam" placeholder="Nhập năm">
+	</div>
+	<div style="width: 40px;height: 50px;float: left;">
+		<button onclick="caculate()" style="margin-top: 10px;margin-bottom: 10px;margin-left: 8px;">></button>
+	</div>
+	<div style="width: 180px;height: 50px;float: left;text-indent: 20px;font-size: 20px;color: white;">
+		Năm âm lịch
+		<input type="text" id="kq" placeholder="Năm âm lịch">
+	</div>
+</div>
+</body>
+</html>
